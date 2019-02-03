@@ -1,0 +1,14 @@
+{
+  "namespace": "InputAddress",
+  "fsNamespace": "input-address",
+  "loader": "../input-address.js",
+  "core": "input-address.kkysq1ii.js",
+  "corePolyfilled": "input-address.ht3y1ngt.js",
+  "components": {
+    "input-address": {
+      "bundleIds": {
+        "$": "cjd6lmur"
+      }
+    }
+  }
+}
