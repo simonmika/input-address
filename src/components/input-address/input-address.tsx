@@ -3,7 +3,7 @@ import { Component } from "@stencil/core"
 @Component({
 	tag: "input-address",
 	styleUrl: "input-address.css",
-	shadow: true,
+	shadow: false,
 })
 export class InputAddress {
 	render() {
