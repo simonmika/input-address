@@ -2,6 +2,7 @@
 	"name": "input-address",
 	"version": "0.0.1",
 	"description": "Stencil Component Starter",
+	"license": "MIT",
 	"module": "dist/esm/index.js",
 	"main": "dist/index.js",
 	"unpkg": "dist/ionic.js",
@@ -12,13 +13,15 @@
 	],
 	"scripts": {
 		"build": "stencil build --docs",
-		"start": "stencil build --dev --watch --serve",
+		"start": "stencil build --dev --es5 --watch --serve",
 		"test": "stencil test --spec --e2e",
 		"test.watch": "stencil test --spec --e2e --watchAll"
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@stencil/core": "~0.16.2"
-	},
-	"license": "MIT"
+		"@stencil/core": "~0.16.2",
+		"@types/jest": "^23.3.13",
+		"jest": "^23.6.0",
+		"tslint": "^5.12.1"
+	}
 }
