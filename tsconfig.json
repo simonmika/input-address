@@ -1,26 +1,44 @@
 {
-  "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "allowUnreachableCode": false,
-    "declaration": false,
-    "experimentalDecorators": true,
-    "lib": [
-      "dom",
-      "es2017"
-    ],
-    "moduleResolution": "node",
-    "module": "esnext",
-    "target": "es2017",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "jsx": "react",
-    "jsxFactory": "h"
-  },
-  "include": [
-    "src",
-    "types/jsx.d.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"allowUnreachableCode": false,
+		"declaration": false,
+		"strictNullChecks": true,
+		"experimentalDecorators": true,
+		"lib": [
+			"dom",
+			"es2017"
+		],
+		"moduleResolution": "node",
+		"module": "esnext",
+		"target": "es2017",
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"jsx": "react",
+		"jsxFactory": "h",
+		"noImplicitAny": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"forceConsistentCasingInFileNames": true,
+		"noImplicitThis": true,
+		"sourceMap": true,
+		"resolveJsonModule": true,
+		"plugins": [
+			{
+			"name": "typescript-tslint-plugin",
+			"alwaysShowRuleFailuresAsWarnings": false,
+			"ignoreDefinitionFiles": true,
+			"configFile": "./tslint.json",
+			"suppressWhileTypeErrorsPresent": false,
+			"mockTypeScriptVersion": false
+			}
+		]
+	},
+	"include": [
+		"src",
+		"types/jsx.d.ts"
+	],
+	"exclude": [
+		"node_modules"
+	]
 }
