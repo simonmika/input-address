@@ -5,8 +5,33 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
 	<title>Stencil Component Starter</title>
 	<script src="/build/input-address.js"></script>
+	<style>
+		label,
+		input {
+			display: block;
+		}
+		</style>
 </head>
 <body>
-	<input-address/>
+	<form id="form" action="test" method="GET">
+		<label for="name">Name</label>
+		<input name="name" placeholder="Name" type="text">
+		<input-address></input-address>
+		<button type="submit">Save</button>
+	</form>
+	<script>
+	const form = document.getElementById("form")
+	const inputs = form.getElementsByTagName("input")
+	form.onsubmit += _ => {
+		console.log("submit")
+		let result = ""
+		for (let index = 0; index < inputs.length; index++) {
+			const input = inputs[index]
+			result += `${input.name}: ${input.value}\n`
+		}
+		alert(result)
+		return true
+	}
+	</script>
 </body>
 </html>
