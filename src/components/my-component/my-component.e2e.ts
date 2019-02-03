@@ -9,7 +9,6 @@ describe("my-component", () => {
 		const element = await page.find("my-component")
 		expect(element).toHaveClass("hydrated")
 	})
-
 	it("renders changes to the name data", async () => {
 		const page = await newE2EPage()
 
