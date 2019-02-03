@@ -1,5 +1,4 @@
-import { Component, Prop } from "@stencil/core"
-import { format } from "../../utils/utils"
+import { Component } from "@stencil/core"
 
 @Component({
 	tag: "input-address",
@@ -7,13 +6,14 @@ import { format } from "../../utils/utils"
 	shadow: true,
 })
 export class InputAddress {
-	@Prop() first: string
-	@Prop() middle: string
-	@Prop() last: string
-	private getText(): string {
-		return format(this.first, this.middle, this.last)
-	}
 	render() {
-		return <div>Hello, World! I'm {this.getText()}</div>
+		return [
+			<label htmlFor="address">Adress</label>,
+			<input name="address" type="text"/>,
+			<label htmlFor="postCode">Post code</label>,
+			<input name="postCode" type="text"/>,
+			<label htmlFor="city">City</label>,
+			<input name="city" type="text"/>,
+		]
 	}
 }
